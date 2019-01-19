@@ -19,8 +19,8 @@ object BitmapConverter {
         val values = IntArray(inputSize * inputSize)
         bitmap.getPixels(values, 0, bitmap.width, 0, 0, bitmap.width, bitmap.height)
         var pixel = 0
-        for (i: Int in 0..inputSize) {
-            for (j: Int in 0..inputSize) {
+        for (i: Int in 0 until inputSize) {
+            for (j: Int in 0 until inputSize) {
                 val value = values[pixel++]
                 byteBuffer.put((value shr 16 and 0xFF).toByte())
                 byteBuffer.put((value shr 8 and 0xFF).toByte())
