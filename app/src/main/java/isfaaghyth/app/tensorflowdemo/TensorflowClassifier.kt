@@ -53,7 +53,7 @@ class TensorflowClassifier(
             if (confidence > THRESHOLD) {
                 priorityQueue.add(
                     Entity(
-                        "" + i,
+                        "$i",
                         if (this.labels.size > i) this.labels[i] else "unknown",
                         confidence
                     )
