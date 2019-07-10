@@ -17,11 +17,13 @@ import android.util.Log
 
 class MainActivity : AppCompatActivity() {
 
-    private val INPUT_SIZE = 224
+    companion object {
+        const val INPUT_SIZE = 224
+        const val MODEL = "mobilenet_quant_v1_224.tflite"
+        const val LABEL = "labels.txt"
+    }
+    
     private lateinit var classifier: Classifier
-
-    private val MODEL = "mobilenet_quant_v1_224.tflite"
-    private val LABEL = "labels.txt"
 
     private lateinit var imgObject: ImageView
     private lateinit var edtUrl: EditText
